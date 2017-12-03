@@ -1,0 +1,48 @@
+<div *ngIf="port">
+<h3>{{port.Name}}</h3>
+
+<mat-chip-list>
+  <mat-chip>{{port.IcaoCode}}</mat-chip>
+  <mat-chip>{{port.IataCode}}</mat-chip>
+</mat-chip-list>
+<div class="row">
+    <div class="col m8">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi auctor blandit est, vel condimentum ipsum venenatis at. Donec eget nunc mattis, venenatis erat non, placerat purus. Proin in commodo velit. Ut aliquam nibh id vulputate placerat. Sed pellentesque, magna hendrerit maximus bibendum, neque ex faucibus ligula, sit amet iaculis nunc metus vitae leo. Maecenas aliquet, mauris ac lacinia lobortis, felis sem lacinia dolor, nec maximus ex mauris ac nibh. Aliquam vehicula congue condimentum. Proin eu libero at arcu laoreet rhoncus vitae sed libero. Duis id lacus scelerisque, ultrices dolor vel, ultrices diam.</p>
+    </div>
+    <div class="col m4">
+       <img class="responsive-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-ofjEu44gwX4NkGGQD34z2JcVjC0AVGxJRDtPYAV3kYzpsC_f" alt="">
+  </div>
+  <div class="col m12">
+    <p>Nunc convallis semper quam, quis porta ipsum semper nec. Nunc elementum a ipsum sit amet ultricies. In a egestas felis. Ut interdum porta purus a ultricies. Vivamus non lacus auctor, pellentesque eros et, elementum arcu. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent scelerisque turpis nisl, at euismod eros faucibus vel. Morbi pellentesque neque auctor nisi efficitur tempor. Nulla aliquet libero est, id feugiat nunc consectetur at. Vestibulum ac elit est. Proin bibendum eros elit, a feugiat lacus accumsan ut. Nulla facilisi. Proin suscipit justo vel tincidunt laoreet. Nunc ultricies ornare turpis a tempus. Ut tincidunt euismod orci, vel faucibus risus viverra ut.
+        
+        Sed condimentum elit venenatis blandit dignissim. Etiam faucibus mollis magna a gravida. Nullam viverra ultrices facilisis. Integer facilisis ut mauris sit amet lobortis. Curabitur commodo dolor facilisis leo condimentum auctor in in est. Etiam id sodales massa. Vivamus tempus libero tortor, ultricies blandit arcu tincidunt sit amet. Donec sagittis lacinia eros, in dictum orci blandit et.</p>
+  </div>
+<mat-list>
+    <mat-list-item>
+       <mat-icon matListIcon><i class="material-icons">location_on</i></mat-icon>
+       <h4 matLine>{{port.Location.Address}}</h4>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+ </mat-list>
+</div>
+<agm-map [latitude]="lat" [longitude]="lng">
+  <agm-marker [latitude]="lat" [longitude]="lng" [label]="label"></agm-marker>
+</agm-map>
+<div class="col m12">
+    <div class="input-field col s6">
+        <i class="material-icons prefix">account_circle</i>
+        <input id="icon_prefix" type="text" class="validate">
+        <label for="icon_prefix">First Name</label>
+      </div>
+      <div class="input-field col s6">
+        <i class="material-icons prefix">phone</i>
+        <input id="icon_telephone" type="tel" class="validate">
+        <label for="icon_telephone">Telephone</label>
+      </div>
+      <div class="input-field col s12">
+          <i class="material-icons prefix">mail</i>
+          <input id="icon_telephone" type="tel" class="validate">
+          <label for="icon_telephone">Telephone</label>
+      </div>
+      <a class="waves-effect purple darken-1 btn center"><i class="material-icons right">phone</i>Contact me</a>
+</div>
